@@ -1,0 +1,13 @@
+.Clues {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 220px;
+  text-align: left;
+  margin-left: 140px;
+}
+
+.Clue {
+  margin-right: 10px;
+  width: 250px;
+}
