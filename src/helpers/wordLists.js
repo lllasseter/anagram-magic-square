@@ -206,7 +206,6 @@ export const availableWords = {
         { word: "bikers", definitions: [ "motorcycle riders", "motorcyclists", "riders" ]},
         { word: "biking", definitions: [ "riding a bicycle", "cycling", "pedaling" ]},
         { word: "bikini", definitions: [ "two-piece swimsuit", "swimwear", "two-piece" ]},
-        { word: "bilged", definitions: [ "filled with water (nautical)", "flooded", "leaked" ]},
         { word: "bilges", definitions: [ "lowest part of a ship", "bottoms", "holds" ]},
         { word: "binary", definitions: [ "using two parts or values", "dual", "bipartite" ]},
         { word: "binder", definitions: [ "something that holds things together", "folder", "fastener" ]},
