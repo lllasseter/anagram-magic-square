@@ -4,9 +4,11 @@ import './Board.css';
 function Board({ wordList }) {
   return (
     <div className="Board">
-      {wordList.map(wordData => (
+      {wordList.map((wordData, index) => (
         <Square
           wordData={wordData}
+          index={index}
+          key={`board-${index}`}
         />
       ))}
     </div>

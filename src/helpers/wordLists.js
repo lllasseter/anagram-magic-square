@@ -1092,7 +1092,6 @@ export const availableWords = {
         { word: "orange", definitions: ["color", "fruit", "citrus"] },
         { word: "octave", definitions: ["music interval", "eight notes"] },
         { word: "occult", definitions: ["hidden", "mysterious", "supernatural"] },
-        { word: "office", definitions: ["workplace", "bureau"] },
         { word: "ornate", definitions: ["decorated", "elaborate", "fancy"] },
         { word: "outcry", definitions: ["protest", "clamor"] },
         { word: "output", definitions: ["production", "yield"] },
@@ -1185,11 +1184,42 @@ export const availableWords = {
         { word: "quinoa", definitions: ["grain-like seed", "food"] },
         { word: "quints", definitions: ["groups of five", "five siblings"] },
         { word: "quirks", definitions: ["odd habits", "peculiarities", "traits"] },
+    ],
+    "r": [
+        { word: "ranges", definitions: ["reaches", "stoves"] },
+        { word: "revise", definitions: ["edit"] },
+    ],
+    "s": [
+        { word: "smooth", definitions: ["not rough", "suave"] },
+        { word: "smarts", definitions: ["intelligence"] },
+        { word: "snooty", definitions: ["uppity"] },
+        { word: "shared", definitions: ["gave away"] },
+        { word: "shaped", definitions: ["curved", "molded"] },
+        { word: "stormy", definitions: ["having bad weather", "rainy"] },
+        { word: "sprang", definitions: ["leapt", "jumped"] },
+        { word: "splits", definitions: ["gymnastics stretch", "divides up"] },
+        { word: "slinky", definitions: ["stretchy toy"] },
+        { word: "shroud", definitions: ["cloak", "shadow"] },
+    ],
+    "t": [
+        { word: "though", definitions: ["despite"] },
+        { word: "trough", definitions: ["manger", "trench"] },
+        { word: "traces", definitions: ["tinges"] },
+        { word: "tinkle", definitions: ["ring"] },
+    ],
+    "u": [
+        { word: "useful", definitions: ["handy", "utilitarian"] },
+        { word: "uppity", definitions: ["snooty"] },
+    ],
+    "v": [
+        { word: "velvet", definitions: ["soft fabric"] },
+        { word: "verges", definitions: ["edges"] },
     ]
 };
 
+// TODO - after getting word lists for every letter, switch to the phrases const (and add more phrases)
 export const testPhrases = [
-    "afd ade each hbbedf fdaahgeac",
+    "inquisitive minds learn most",
 ]
 
 export const phrases = [
@@ -1198,4 +1228,20 @@ export const phrases = [
     "people will believe whispers",
     "we have met the enemy and hes us",
     "the middle of chaos there i was",
+    "better to be happy than be wise",
+    "history belongs to the winner",
+    "praise makes all feel waelthy",
+    "thorough plans shut worry out",
+    "lazy people have no spare time",
+    "subtlety is better than force",
+    "real love stories never do end",
+    "no man is wise by himself alone",
+    "everyone begins as a beginner",
+    "inquisitive minds learn most",
+    "sharing is twice the pleasure",
+    "treasure the perfect moments",
+    "a man cannot serve two masters",
+    "stolen hours are the sweetest",
+    "who knows no evil assumes none",
+    "when in rome do as the romans do"
 ]

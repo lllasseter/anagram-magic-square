@@ -1,4 +1,5 @@
-import { availableWords, testPhrases } from "./wordLists";
+import { availableWords } from "./wordLists";
+import { propEq, find } from 'ramda';
 
 export function scrambleLetters(word) {
     word = word.split('');
@@ -22,11 +23,16 @@ export function getRandomWord(number, letter) {
     return { word, clue, number }
 }
 
-export function generateWordList() {
+export function generateWordList(phrase) {
     // TODO - generate random grid where rows and columns add up to 65
     const numberGrid = [17, 24, 1, 8, 15, 23, 5, 7, 14, 16, 4, 6, 13, 20, 22, 10, 12, 19, 21, 3, 11, 18, 25, 2, 9];
 
-    const phrase = testPhrases[Math.floor(Math.random() * (testPhrases.length))];
-    const phraseAsCharList = phrase.replace(/\s/g, '').split('')
-    return numberGrid.map(number => getRandomWord(number, phraseAsCharList[number - 1]));
+    return numberGrid.map(number => getRandomWord(number, phrase[number - 1]));
+}
+
+export function getPhraseLetter(index, guesses) {
+    const guess = find(propEq((index + 1).toString(), 'number'), guesses);
+    console.log(guess);
+    if (!guess || !guess.word) return null;
+    return guess.word.charAt(0);
 }

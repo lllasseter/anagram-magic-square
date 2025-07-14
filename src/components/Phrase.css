@@ -1,0 +1,17 @@
+.Phrase {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.Letter {
+  width: 25px;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+  height: 25px;
+}
+
+.Number {
+  font-size: 11px;
+}
