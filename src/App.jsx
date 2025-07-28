@@ -4,7 +4,7 @@ import { generateWordList } from './helpers/helperFunctions';
 import Clues from './components/Clues';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAnswer, setPhrase, clearGuesses } from './slices/gameSlice';
-import { testPhrases } from './helpers/wordLists';
+import { phrases } from './helpers/wordLists';
 import Phrase from './components/Phrase';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           let answer = [];
           let phraseAsCharList = []; 
           if (wordList.length == 0) {
-            const phrase = testPhrases[Math.floor(Math.random() * (testPhrases.length))];
+            const phrase = phrases[Math.floor(Math.random() * (phrases.length))];
             phraseAsCharList = phrase.replace(/\s/g, '').split('')
             answer = generateWordList(phraseAsCharList);
           }
