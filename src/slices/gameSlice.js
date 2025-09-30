@@ -4,6 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
       guesses: [],
       answer: [],
       phrase: [],
+      showTotals: "off",
     };
 
     export const gameSlice = createSlice({
@@ -22,8 +23,11 @@ import { createSlice } from '@reduxjs/toolkit';
         clearGuesses: state => {
             state.guesses = [];
           },
+        setShowTotals(state, { payload }) {
+            state.showTotals = payload.showTotals;
+          }
       },
     });
 
-    export const { setGuess, setAnswer, setPhrase, clearGuesses } = gameSlice.actions;
+    export const { setGuess, setAnswer, setPhrase, clearGuesses, setShowTotals } = gameSlice.actions;
     export default gameSlice.reducer;

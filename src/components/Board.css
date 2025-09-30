@@ -1,8 +1,34 @@
-.Board {
+.Row {
   display: flex;
-  flex-direction: row;
+}
+
+.column-totals {
+  display: flex;
+  width: 540px;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.row-totals {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.Total {
+  min-width: 40px;
+  min-height: 30px;
+}
+
+.Squares {
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   width: 540px;
-  margin: 0 auto;
+  min-width: 540px;
+}
+
+.off {
+  visibility: hidden;
 }
