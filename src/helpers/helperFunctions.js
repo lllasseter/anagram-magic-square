@@ -1,5 +1,5 @@
 import { availableWords } from "./wordLists";
-import { propEq, find, pluck, uniq } from 'ramda';
+import { propEq, find, pluck, uniq, reduce, forEach } from 'ramda';
 
 export function scrambleLetters(word) {
     const originalWord = word;
@@ -56,3 +56,47 @@ const magicSquares = [
     [18, 25, 2, 9, 11, 4, 6, 13, 20, 22, 15, 17, 24, 1, 8, 21, 3, 10, 12, 19, 7, 14, 16, 23, 5],
     [17, 23, 4, 10, 11, 24, 5, 6, 12, 18, 1, 7, 13, 19, 25, 8, 14, 20, 21, 2, 15, 16, 22, 3, 9],
 ]
+
+const rows = [
+    [0, 1, 2, 3, 4],
+    [5, 6, 7, 8, 9],
+    [10, 11, 12, 13, 14],
+    [15, 16, 17, 18, 19],
+    [20, 21, 22, 23, 24],
+]
+
+const columns = [
+    [0, 5, 10, 15, 20],
+    [1, 6, 11, 16, 21],
+    [2, 7, 12, 17, 22],
+    [3, 8, 13, 18, 23],
+    [4, 9, 14, 19, 24],
+]
+
+function getTotalForIndexes(guesses, indexes) {
+    return reduce((acc, index) => {
+        let value = guesses[index]?.number || "0";
+        value = parseInt(value, 10);
+        return value + acc;
+        },
+        0,
+        indexes,
+    );
+}
+
+// start with one row, hardcoded
+export function getRowTotals(guesses) {
+    const rowTotals = [];
+    forEach(row => {
+        rowTotals.push(getTotalForIndexes(guesses, row));
+    }, rows)
+    return rowTotals;
+}
+
+export function getColumnTotals(guesses) {
+    const columnTotals = [];
+    forEach(row => {
+        columnTotals.push(getTotalForIndexes(guesses, row));
+    }, columns)
+    return columnTotals;
+}
